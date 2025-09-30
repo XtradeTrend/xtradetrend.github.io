@@ -1,47 +1,179 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>XtradeTrend</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9fafc;
-      color: #333;
-      text-align: center;
-    }
-    header {
-      background: #0a66c2;
-      color: white;
-      padding: 2rem;
-    }
-    h1 {
-      margin: 0;
-    }
-    main {
-      padding: 2rem;
-    }
-    footer {
-      margin-top: 3rem;
-      padding: 1rem;
-      background: #eee;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>XTradeTrend — Invest & Learn</title>
+  <meta name="description" content="XTradeTrend — sample homepage inspired by eToro structure. Clean, editable, responsive." />
+
+  <!-- favicons (placeholders) -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- main stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- OpenGraph minimal -->
+  <meta property="og:title" content="XTradeTrend — Invest & Learn" />
+  <meta property="og:description" content="Copy top traders, trade stocks, crypto & learn." />
+  <meta property="og:image" content="images/meta-share.png" />
 </head>
 <body>
-  <header>
-    <h1>Welcome to XtradeTrend</h1>
-    <p>Your trading education and insights hub</p>
-  </header>
-  <main>
-    <h2>About Us</h2>
-    <p>We provide analysis, strategies, and tools to help you learn and grow as a trader.</p>
-  </main>
-  <footer>
-    <p>© 2025 XtradeTrend</p>
-  </footer>
+  <div class="site-wrapper">
+
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/">
+          <!-- inline SVG logo or image -->
+          <img src="images/logo.svg" alt="XTradeTrend" width="160" height="40">
+        </a>
+
+        <nav class="main-nav" id="mainNav">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#academy">Academy</a></li>
+            <li><a href="#footer">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-ctas">
+          <a class="btn btn-outline" href="/login">Login</a>
+          <a class="btn btn-primary" href="/signup">Open Account</a>
+          <button id="mobileMenuBtn" class="mobile-menu-btn" aria-label="Toggle menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1><strong>Trade smarter</strong> with XTradeTrend</h1>
+          <p class="lead">Stocks • Crypto • ETFs — copy top traders, learn, and trade on a single platform.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="/signup">Open an account</a>
+            <a class="btn btn-ghost" href="#academy">Start Learning</a>
+          </div>
+
+          <ul class="trust-row">
+            <li><img src="images/icon-security.svg" alt="" width="28"> Regulated</li>
+            <li><img src="images/icon-copy.svg" alt="" width="28"> Copy trading</li>
+            <li><img src="images/icon-assets.svg" alt="" width="28"> 7,000+ assets</li>
+          </ul>
+        </div>
+
+        <div class="hero-media">
+          <!-- desktop / mobile responsive images (lazy swap handled by JS) -->
+          <img class="hero-img hero-img--desk lazy" data-src="images/hero-desktop.webp" alt="Platform screenshot">
+          <img class="hero-img hero-img--mob lazy" data-src="images/hero-mobile.webp" alt="App screenshot">
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why XTradeTrend</h2>
+          <p>Powerful tools, social trading and education in one place.</p>
+        </div>
+
+        <div class="cards">
+          <article class="card">
+            <img src="images/icon-copy.svg" alt="" class="card-icon">
+            <h3>Copy top traders</h3>
+            <p>Follow and automatically copy the trades of proven investors.</p>
+          </article>
+          <article class="card">
+            <img src="images/icon-mobile.svg" alt="" class="card-icon">
+            <h3>Mobile-first</h3>
+            <p>Trade on the go with our native apps.</p>
+          </article>
+          <article class="card">
+            <img src="images/icon-education.svg" alt="" class="card-icon">
+            <h3>Learn & improve</h3>
+            <p>Free guides, videos and demos to build your skills.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO - animated logos like eToro -->
+    <section id="portfolio" class="section portfolio">
+      <div class="container">
+        <div class="section-header">
+          <h2>Popular on XTradeTrend</h2>
+        </div>
+
+        <div class="portfolio-logos">
+          <!-- small logos (prepare several SVG/PNG logos) -->
+          <img src="images/logo-apple.svg" alt="Apple" loading="lazy">
+          <img src="images/logo-intel.svg" alt="Intel" loading="lazy">
+          <img src="images/logo-tesla.svg" alt="Tesla" loading="lazy">
+          <img src="images/logo-amzn.svg" alt="Amazon" loading="lazy">
+          <img src="images/logo-msft.svg" alt="Microsoft" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- ACADEMY (thumbnails & CTA) -->
+    <section id="academy" class="section academy">
+      <div class="container">
+        <div class="section-header">
+          <h2>XTrade Academy</h2>
+          <p>Short lessons and video guides for traders of all levels.</p>
+        </div>
+
+        <div class="academy-grid">
+          <figure class="academy-item">
+            <img data-src="images/academy-1.jpg" alt="Stock break" class="lazy">
+            <figcaption>Stock break</figcaption>
+          </figure>
+          <figure class="academy-item">
+            <img data-src="images/academy-2.jpg" alt="Investing strategies" class="lazy">
+            <figcaption>Investing strategies</figcaption>
+          </figure>
+          <figure class="academy-item">
+            <img data-src="images/academy-3.jpg" alt="Technical analysis" class="lazy">
+            <figcaption>Technical analysis</figcaption>
+          </figure>
+        </div>
+
+        <div class="center">
+          <a class="btn btn-outline" href="/academy">Start Learning Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="images/logo-footer.svg" alt="XTradeTrend" width="140">
+            <p>Copy top traders — invest with confidence.</p>
+          </div>
+
+          <nav class="footer-nav">
+            <a href="/about">About</a>
+            <a href="/help">Help</a>
+            <a href="/terms">Terms</a>
+          </nav>
+
+          <div class="socials">
+            <a href="#"><img src="images/icon-twitter.svg" alt="Twitter" width="20"></a>
+            <a href="#"><img src="images/icon-linkedin.svg" alt="LinkedIn" width="20"></a>
+          </div>
+        </div>
+
+        <p class="copyright">© 2025 XTradeTrend — All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
